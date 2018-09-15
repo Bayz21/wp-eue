@@ -15,7 +15,7 @@ function exploit() {
 fi
 
 }
-cat << "ZERO"
+cat << "BAYZ21"
 
 ██████╗  █████╗ ██╗   ██╗███████╗██████╗  ██╗
 ██╔══██╗██╔══██╗╚██╗ ██╔╝╚══███╔╝╚════██╗███║
@@ -24,10 +24,10 @@ cat << "ZERO"
 ██████╔╝██║  ██║   ██║   ███████╗███████╗ ██║
 ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝ ╚═╝
 ---------------------------------------------
-------- Wordpress Auto Shell Uploader -------
+----- Wordpress Auto Shell Uploader V.2 -----
 ---------------------------------------------
  
-ZERO
+BAYZ21
 echo -n "Masukan Username : " ;
 read user
 echo -n "Masukan Password : " ;
